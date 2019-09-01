@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bettina Muzzio</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Muli");
+
+      body {
+        font-family: "Muli", Arial, Helvetica, sans-serif;
+        margin: 90px 410px 0 410px;
+        background: white;
+      }
+      h1 {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+      }
+      h2 {
+        font-size: 16px;
+        padding-top: 30px;
+        font-weight: 900;
+      }
+      p {
+        font-size: 16px;
+        line-height: 35px;
+        letter-spacing: 0.01em;
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
+
+      li {
+        font-size: 16px;
+        line-height: 35px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li:before {
+        content: "→";
+        padding-right: 8px;
+        margin-left: -27px;
+      }
+
+      .links {
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px dotted gray;
+        transition: color 0.1s linear;
+      }
+
+      a:visited {
+        color: black;
+      }
+
+      a:hover {
+        color: #9b23ea;
+        border-bottom-color: #9b23ea;
+        cursor: pointer;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 20px 25px;
+        border: 1px solid gray;
+        border-radius: 3px;
+        transition: all 100ms ease-in-out;
+        box-shadow: 0px 4px 4px 0 rgba(65, 65, 75, 0.08);
+        margin: 25px 0;
+        background: transparent;
+      }
+      button:hover {
+        color: white;
+        background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+        cursor: pointer;
+      }
+
+      footer {
+        font-size: 12px;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+      }
+      .shecodes {
+        margin: 8px;
+      }
+      hr {
+        height: 1px;
+        background: black;
+      }
+      .highlight {
+        color: #9b23ea;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      BETTINA MUZZIO
+    </h1>
+    <p>
+      <span>
+        Hi!
+      </span>
+      I'm a brazilian multidisciplinary designer based in Lisbon, Portugal with
+      professional experience in editorial and digital design. I graduated with
+      a Bachelors degree in Design at Escola Superior de Propaganda e Marketing
+      (ESPM-Rio). Currently pursuing a master's degree in Design Management at
+      IADE in Lisbon to improve my strategy and management skills working with
+      Design Thinking.
+    </p>
+    <hr />
+    <h2>
+      Find me on:
+    </h2>
+    <ul>
+      <li>
+        <a
+          class="links"
+          href="https://www.linkedin.com/in/bettinamuzzio/"
+          target="_blank"
+        >
+          Linkedin
+        </a>
+      </li>
+      <li>
+        <a
+          class="links"
+          href="https://cargocollective.com/bmuzzio"
+          target="_blank"
+        >
+          Online portfolio
+        </a>
+      </li>
+    </ul>
+    <button>
+      Send me an email
+    </button>
+    <script>
+      function apply() {
+        let name = prompt("What is your name?");
+        let email = prompt("Do you want to send me an email?");
+        email = email.toLowerCase();
+        email = email.replace("yep", "yes");
+        email = email.trim();
+        let hi = document.querySelector("span");
+        if (email === "yes") {
+          hi.innerHTML = `Hi, <span class="highlight">${name}</span>! My email is <a href="mailto:bettinamuzzio@gmail.com" class="links">bettinamuzzio@gmail.com</a>.`;
+        } else {
+          hi.innerHTML = `Hi, <span class="highlight">${name}</span>!`;
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", apply);
+    </script>
+  </body>
+  <footer>
+    This landing page was made by me from scratch, thanks to
+    <a href="https://www.shecodes.io" target="_blank" class="shecodes">
+      <img
+        src="https://www.shecodes.io/assets/branding/logo-shecodes-ca8eb1debdde7796b249c2957fe408871873a64f3e7fe9557726e156f5d7724d.png"
+        width="90"
+        alt="SheCodes logo"
+        style="vertical-align: middle"
+      />
+    </a>
+  </footer>
+</html>
